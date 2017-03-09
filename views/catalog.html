@@ -1,0 +1,54 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href="/assets/catalog.css" rel="stylesheet">
+
+<div class="container">
+	<div class="row">
+	{{#each result}}
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<article class="card-wrapper">
+				<div class="image-holder">
+					<a href="/detail/{{id}}" class="image-holder__link"></a>
+					<div class="image-liquid image-holder--original" style="background-image: url('/img/profile/{{id}}.jpg')">
+					</div>
+				</div>
+
+				<div class="product-description">
+					<!-- title -->
+					<h1 class="product-description__title">
+						<a href="/detail/{{id}}">						
+							{{first_name}}
+							</a>
+					</h1>
+
+					<!-- category and price -->
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 product-description__category secondary-text">
+							<a href="/search?q={{title}}">						
+								{{title}}
+							</a>
+						</div>						
+					</div>
+					<!-- sizes -->
+					<div class="sizes-wrapper">
+						Current position
+						<br />
+						<span class="text-uppercase">
+							{{current_position}}
+						</span>
+					</div>
+					<!-- colors -->
+					<div class="color-wrapper">
+						Skill
+						<br/>
+						<span class="secondary-text text-uppercase">
+							Nodejs,PHP
+						</span>					
+					</div>
+				</div>
+
+			</article>
+		</div>	
+		{{/each}}	
+	</div>		
+</div>
